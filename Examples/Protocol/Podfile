@@ -2,7 +2,7 @@
 # platform :ios, '7.0'
 
 target "Example" do
-  pod "UITableViewDataSource-RACExtensions", :path => "../../"
+  pod "UITableViewDataSource-RACExtensions", :path => "../.."
 end
 
 # target "ExampleTests" do
