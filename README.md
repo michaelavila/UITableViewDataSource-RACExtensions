@@ -15,12 +15,12 @@ To run the example projects:
 0. `bundle exec pod install`
 0. `open Example.xcworkspace`
 
-The primary difference between the Basic and Protocol examples are the use of
+The primary difference between the Basic and Protocol examples is the use of
 the RACTableViewCell protocol to render objects other than strings.
 
 Both examples are very short and should be easy to digest. In particular, pay
 attention to the `EAppDelegate.m` files in both projects. In the Protocol
-project, it is important to notice both the additional class `ETableViewCell`
+project, it is important to notice both the additional `ETableViewCell` class
 as well as setting that class on the prototype cell in `Main.storyboard`. Pay
 attention to both.
 
