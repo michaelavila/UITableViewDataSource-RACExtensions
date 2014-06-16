@@ -6,7 +6,25 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example projects:
+
+0. `hub clone michaelavila/UITableViewDataSource-RACExtensions`, if you haven't already
+0. `cd UITableViewDataSource-RACExtensions`
+0. either `cd Examples/Basic` or `cd Examples/Custom`
+  0. Basic: Uses basic UITableCell + NSString
+  0. Protocol: Uses RACTableCell protocol `prepareToAppear`
+0. `bundle install`, if you don't have bundler than first run `gem install bundler`
+0. `bundle exec pod install`
+0. `open Example.xcworkspace`
+
+The primary difference between the Basic and Protocol examples are the use of
+the RACTableViewCell protocol to render objects other than strings.
+
+Both examples are very short and should be easy to digest. In particular, pay
+attention to the `EAppDelegate.m` files in both projects. In the Protocol
+project, it is important to notice both the additional class `ETableViewCell`
+as well as setting that class on the prototype cell in `Main.storyboard`. Pay
+attention to both.
 
 ## Requirements
 
