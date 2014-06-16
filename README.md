@@ -33,6 +33,58 @@ If you `#import <UITableViewDataSource-RACExtensions/UITableViewController+RACTa
 The events that `signal` emits will be bound as the data for the UITableView. The `reuseIdentifier` is
 specified on the UITableViewCell that you want to create new cell views out of.
 
+Here is both a basic usage as well as an example using more complex data. Basic first:
+
+```objc
+#import "EAppDelegate.h"
+#import <UITableViewDataSource-RACExtensions/UITableViewController+RACTableViewDataSource.h>
+
+@implementation EAppDelegate
+{
+    id<UITableViewDataSource> groceryList;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    groceryList = [(UITableViewController *)self.window.rootViewController
+        rac_dataSource:[RACSignal return:@[@"Bananas", @"Beer"]]
+        reuseIdentifier:@"groceryListItemCell"];
+
+    return YES;
+}
+
+@end
+```
+
+And here is an example with less basic data:
+
+```objc
+#import "EAppDelegate.h"
+#import <UITableViewDataSource-RACExtensions/UITableViewController+RACTableViewDataSource.h>
+
+@implementation EAppDelegate
+{
+    id<UITableViewDataSource> groceryList;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    groceryList = [(UITableViewController *)self.window.rootViewController
+        rac_dataSource:[RACSignal return:@[
+            @{@"name": @"Oranges", @"quantity": @"2 dozen"},
+            @{@"name": @"Beer", @"quantity": @"6 pack"}
+        ]]
+        reuseIdentifier:@"groceryListItemCell"];
+
+    return YES;
+}
+
+@end
+```
+
+And since the dataSource is a signal you can swap it out for more complex
+signals that actually make network requests (or not).
+
 ### RACTableViewCell
 
 This protocol defines one simple method:
@@ -40,6 +92,9 @@ This protocol defines one simple method:
     - (void)prepareToAppear:(NSObject *)data;
 
 This is the method that the RACTableViewDataSource uses to give each cell its data.
+
+For an example implementation checkout the `ETableViewCell` [ETableViewCell.h](https://github.com/michaelavila/UITableViewDataSource-RACExtensions/blob/chore/readme/Examples/Protocol/Example/ETableViewCell.h) and [ETableViewCell.m](https://github.com/michaelavila/UITableViewDataSource-RACExtensions/blob/chore/readme/Examples/Protocol/Example/ETableViewCell.m) from the protocol
+example which renders data more complicated than an `NSString`.
 
 ## Installation
 
