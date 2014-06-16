@@ -8,14 +8,14 @@ Pod::Spec.new do |s|
   s.name             = "UITableViewDataSource-RACExtensions"
   s.version          = File.read('VERSION')
   s.summary          = "RACify your UITableViewDataSource"
-  s.description      = <<-DESC
-                       UITableViewDataSource-RACExtensions adds a single method
-                       to UITableViewControllers called `rac_dataSource` and it
-                       requires a signal be passed to it.
-                       
-                       The signal that you pass to `rac_dataSource` is used to
-                       populate the UITableView.
-                       DESC
+  s.description      = %{
+    UITableViewDataSource-RACExtensions adds a single method
+    to UITableViewControllers called `rac_dataSource` and it
+    requires a signal be passed to it.
+
+    The signal that you pass to `rac_dataSource` is used to
+    populate the UITableView.
+  }
   s.homepage         = "https://github.com/michaelavila/UITableViewDataSource-RACExtensions"
   s.license          = 'GPLv2'
   s.author           = { "Michael Avila" => "me@michaelavila.com" }
