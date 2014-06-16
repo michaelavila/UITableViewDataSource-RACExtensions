@@ -20,8 +20,8 @@
 
 @implementation UITableViewController (RACTableViewDataSource)
 
-- (void)rac_dataSource:(RACSignal *)signal reuseIdentifier:(NSString *)reuseIdentifier {
-    [RACTableViewDataSource
+- (id<UITableViewDataSource>)rac_dataSource:(RACSignal *)signal reuseIdentifier:(NSString *)reuseIdentifier {
+    return [RACTableViewDataSource
         dataSource:signal
         tableView:(UITableView *)self.view
         andReuseIdentifier:reuseIdentifier];
