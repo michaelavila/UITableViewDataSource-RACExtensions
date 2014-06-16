@@ -27,8 +27,6 @@ task :version do
   if new_version_number == ""
     new_version_number = version
   end
-
-  replace_version_number(new_version_number)
 end
 
 desc "Release a new version of the Pod (append repo=name to push to a private spec repo)"
@@ -61,7 +59,7 @@ task :release do
   sh "pod lib lint"
 
   # Then release
-  sh "git commit #{podspec_path} CHANGELOG.md VERSION -m 'Release #{spec_version}' --allow-empty"
+  sh "git commit #{podspec_path} CHANGELOG.md -m 'Release #{spec_version}' --allow-empty"
   sh "git tag -a #{spec_version} -m 'Release #{spec_version}'"
   sh "git push origin master"
   sh "git push origin --tags"
@@ -142,16 +140,4 @@ def next_version(version)
   last = (version_components.last.to_i() + 1).to_s
   version_components[-1] = last
   Pod::Version.new(version_components.join("."))
-end
-
-# @param  [String] new_version_number
-#         the new version number
-#
-# @note   This methods replaces the version number in the podspec file
-#         with a new version number.
-#
-# @return void
-#
-def replace_version_number(new_version_number)
-  File.open('VERSION', "w") { |file| file.puts new_version_number }
 end
