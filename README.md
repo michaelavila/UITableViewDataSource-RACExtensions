@@ -37,6 +37,10 @@ it, simply add the following line to your Podfile:
 
 Michael Avila
 
+## Acknowledgments
+
+[Colen Eberhardt's](https://twitter.com/ColinEberhardt) notes [here](http://www.scottlogic.com/blog/2014/05/11/reactivecocoa-tableview-binding.html) were an influence.
+
 ## License
 
 UITableViewDataSource-RACExtensions is available under the GPLv2 license. See the LICENSE file for more info.
