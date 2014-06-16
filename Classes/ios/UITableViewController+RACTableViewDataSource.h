@@ -22,6 +22,6 @@
 
 @interface UITableViewController (RACTableViewDataSource)
 
-- (void)rac_dataSource:(RACSignal *)signal reuseIdentifier:(NSString *)reuseIdentifier;
+- (id<UITableViewDataSource>)rac_dataSource:(RACSignal *)signal reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

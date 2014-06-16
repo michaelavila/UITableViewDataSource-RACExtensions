@@ -10,11 +10,13 @@
 
 #import <UITableViewDataSource-RACExtensions/UITableViewController+RACTableViewDataSource.h>
 
-@implementation EAppDelegate
+@implementation EAppDelegate {
+    id<UITableViewDataSource> groceryList;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [(UITableViewController *)self.window.rootViewController
+    groceryList = [(UITableViewController *)self.window.rootViewController
         rac_dataSource:[RACSignal return:@[@"Bananas", @"Beer"]]
         reuseIdentifier:@"groceryListItemCell"];
 
