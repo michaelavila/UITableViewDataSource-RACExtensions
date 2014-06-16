@@ -10,17 +10,17 @@
 
 #import <UITableViewDataSource-RACExtensions/UITableViewController+RACTableViewDataSource.h>
 
-@implementation EAppDelegate
+@implementation EAppDelegate {
+    id<UITableViewDataSource> groceryList;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *groceryList = @[
-        @{@"name": @"Oranges", @"quantity": @"2 dozen"},
-        @{@"name": @"Beer", @"quantity": @"6 pack"}
-    ];
-    
-    [(UITableViewController *)self.window.rootViewController
-        rac_dataSource:[RACSignal return:groceryList]
+    groceryList = [(UITableViewController *)self.window.rootViewController
+        rac_dataSource:[RACSignal return:@[
+            @{@"name": @"Oranges", @"quantity": @"2 dozen"},
+            @{@"name": @"Beer", @"quantity": @"6 pack"}
+        ]]
         reuseIdentifier:@"groceryListItemCell"];
 
     return YES;
