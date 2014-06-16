@@ -9,10 +9,12 @@ Pod::Spec.new do |s|
   s.version          = File.read('VERSION')
   s.summary          = "RACify your UITableViewDataSource"
   s.description      = <<-DESC
-                       An optional longer description of UITableViewDataSource-RACExtensions
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       UITableViewDataSource-RACExtensions adds a single method
+                       to UITableViewControllers called `rac_dataSource` and it
+                       requires a signal be passed to it.
+                       
+                       The signal that you pass to `rac_dataSource` is used to
+                       populate the UITableView.
                        DESC
   s.homepage         = "https://github.com/michaelavila/UITableViewDataSource-RACExtensions"
   s.license          = 'MIT'
