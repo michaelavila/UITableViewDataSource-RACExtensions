@@ -1,12 +1,11 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '7.0'
 
-target "Demo" do
+target "Example" do
   pod "UITableViewDataSource-RACExtensions", :path => "../"
 end
 
-# Uncomment the following lines to add testing dependencies
-# target "DemoTests" do
+# target "ExampleTests" do
 #   pod 'Expecta'
 # end
 
