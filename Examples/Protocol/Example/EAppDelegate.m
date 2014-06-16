@@ -14,8 +14,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSArray *groceryList = @[
+        @{@"name": @"Oranges", @"quantity": @"2 dozen"},
+        @{@"name": @"Beer", @"quantity": @"6 pack"}
+    ];
+    
     [(UITableViewController *)self.window.rootViewController
-        rac_dataSource:[RACSignal return:@[@"Bananas", @"Beer"]]
+        rac_dataSource:[RACSignal return:groceryList]
         reuseIdentifier:@"groceryListItemCell"];
 
     return YES;
