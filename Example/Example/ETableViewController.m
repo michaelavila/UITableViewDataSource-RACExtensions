@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Michael Avila. All rights reserved.
 //
 
-#import "EViewController.h"
+#import "ETableViewController.h"
 
-@interface EViewController ()
+@interface ETableViewController ()
 
 @end
 
-@implementation EViewController
+@implementation ETableViewController
 
 - (void)viewDidLoad
 {
