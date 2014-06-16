@@ -1,8 +1,6 @@
 # UITableViewDataSource-RACExtensions
 
 [![Version](https://img.shields.io/cocoapods/v/UITableViewDataSource-RACExtensions.svg?style=flat)](http://cocoadocs.org/docsets/UITableViewDataSource-RACExtensions)
-[![License](https://img.shields.io/cocoapods/l/UITableViewDataSource-RACExtensions.svg?style=flat)](http://cocoadocs.org/docsets/UITableViewDataSource-RACExtensions)
-[![Platform](https://img.shields.io/cocoapods/p/UITableViewDataSource-RACExtensions.svg?style=flat)](http://cocoadocs.org/docsets/UITableViewDataSource-RACExtensions)
 
 ## Usage
 
