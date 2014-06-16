@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Michael Avila" => "me@michaelavila.com" }
   s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/EXAMPLE'
 
   # s.platform     = :ios, '5.0'
   # s.ios.deployment_target = '5.0'
