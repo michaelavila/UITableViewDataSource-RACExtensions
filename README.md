@@ -26,8 +26,6 @@ project, it is important to notice both the additional class `ETableViewCell`
 as well as setting that class on the prototype cell in `Main.storyboard`. Pay
 attention to both.
 
-## Requirements
-
 ## Installation
 
 UITableViewDataSource-RACExtensions is available through [CocoaPods](http://cocoapods.org). To install
