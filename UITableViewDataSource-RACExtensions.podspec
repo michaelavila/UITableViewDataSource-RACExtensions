@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "UITableViewDataSource-RACExtensions"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "RACify your UITableViewDataSource"
   s.description      = %{
     UITableViewDataSource-RACExtensions adds a single method
