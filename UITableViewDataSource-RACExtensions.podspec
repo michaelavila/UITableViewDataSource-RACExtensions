@@ -26,6 +26,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes'
 
+  s.dependency 'ReactiveCocoa', '~> 2.3.1'
+
   # s.public_header_files = 'Classes/**/*.h'
   # s.frameworks = 'SomeFramework', 'AnotherFramework'
   # s.dependency 'JSONKit', '~> 1.4'
