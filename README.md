@@ -26,6 +26,23 @@ project, it is important to notice both the additional class `ETableViewCell`
 as well as setting that class on the prototype cell in `Main.storyboard`. Pay
 attention to both.
 
+### UITableViewController+RACExtensions
+
+If you `#import <UITableViewDataSource-RACExtensions/UITableViewController+RACTableViewDataSource.h>` then all UITableViewControllers will have a `rac_dataSource` method. This is what the signature for dataSource looks like:
+
+    - (void)rac_dataSource:(RACSignal *)signal reuseIdentifier:(NSString *)reuseIdentifier;
+
+The events that `signal` emits will be bound as the data for the UITableView. The `reuseIdentifier` is
+specified on the UITableViewCell that you want to create new cell views out of.
+
+### RACTableViewCell
+
+This protocol defines one simple method:
+
+    - (void)prepareToAppear:(NSObject *)data;
+
+This is the method that the RACTableViewDataSource uses to give each cell its data.
+
 ## Installation
 
 UITableViewDataSource-RACExtensions is available through [CocoaPods](http://cocoapods.org). To install
