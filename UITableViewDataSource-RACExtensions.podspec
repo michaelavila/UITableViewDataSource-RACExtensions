@@ -7,19 +7,19 @@
 Pod::Spec.new do |s|
   s.name             = "UITableViewDataSource-RACExtensions"
   s.version          = File.read('VERSION')
-  s.summary          = "A short description of UITableViewDataSource-RACExtensions."
+  s.summary          = "RACify your UITableViewDataSource"
   s.description      = <<-DESC
-                       An optional longer description of UITableViewDataSource-RACExtensions
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       UITableViewDataSource-RACExtensions adds a single method
+                       to UITableViewControllers called `rac_dataSource` and it
+                       requires a signal be passed to it.
+                       
+                       The signal that you pass to `rac_dataSource` is used to
+                       populate the UITableView.
                        DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
+  s.homepage         = "https://github.com/michaelavila/UITableViewDataSource-RACExtensions"
+  s.license          = 'GPLv2'
   s.author           = { "Michael Avila" => "me@michaelavila.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/EXAMPLE'
+  s.source           = { :git => "git@github.com:michaelavila/UITableViewDataSource-RACExtensions.git", :tag => s.version.to_s }
 
   # s.platform     = :ios, '5.0'
   # s.ios.deployment_target = '5.0'
@@ -27,10 +27,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Classes'
-  s.resources = 'Assets/*.png'
 
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
+  s.ios.exclude_files = ''
   # s.public_header_files = 'Classes/**/*.h'
   # s.frameworks = 'SomeFramework', 'AnotherFramework'
   # s.dependency 'JSONKit', '~> 1.4'

@@ -19,9 +19,9 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Michael Avila, me@michaelavila.com
+Michael Avila
 
 ## License
 
-UITableViewDataSource-RACExtensions is available under the MIT license. See the LICENSE file for more info.
+UITableViewDataSource-RACExtensions is available under the GPLv2 license. See the LICENSE file for more info.
 
