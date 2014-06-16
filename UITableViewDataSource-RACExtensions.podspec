@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     populate the UITableView.
   }
   s.homepage         = "https://github.com/michaelavila/UITableViewDataSource-RACExtensions"
-  s.license          = 'GPLv2'
+  s.license          = 'MIT'
   s.author           = { "Michael Avila" => "me@michaelavila.com" }
   s.source           = { :git => "git@github.com:michaelavila/UITableViewDataSource-RACExtensions.git", :tag => s.version.to_s }
 

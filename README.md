@@ -58,5 +58,5 @@ Michael Avila
 
 ## License
 
-UITableViewDataSource-RACExtensions is available under the GPLv2 license. See the LICENSE file for more info.
+UITableViewDataSource-RACExtensions is available under the MIT license. See the LICENSE file for more info.
 
