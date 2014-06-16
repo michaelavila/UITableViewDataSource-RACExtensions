@@ -19,7 +19,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Michael Avila, me@michaelavila.com
+Michael Avila
 
 ## License
 
