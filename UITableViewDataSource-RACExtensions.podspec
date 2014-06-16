@@ -21,9 +21,7 @@ Pod::Spec.new do |s|
   s.author           = { "Michael Avila" => "me@michaelavila.com" }
   s.source           = { :git => "git@github.com:michaelavila/UITableViewDataSource-RACExtensions.git", :tag => s.version.to_s }
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
+  s.platform     = :ios, '5.0'
   s.requires_arc = true
 
   s.source_files = 'Classes'
