@@ -12,7 +12,9 @@
         _data = @[];
         
         RAC(self, data) = [[source ignore:nil] doNext:^(NSArray *data) {
-            [_tableView reloadData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_tableView reloadData];
+            });
         }];
         
         _tableView.dataSource = self;
