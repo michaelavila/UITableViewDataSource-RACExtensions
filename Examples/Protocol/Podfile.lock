@@ -6,18 +6,18 @@ PODS:
   - ReactiveCocoa/no-arc (2.3.1)
   - ReactiveCocoa/UI (2.3.1):
     - ReactiveCocoa/Core
-  - UITableViewDataSource-RACExtensions (0.1.2):
+  - UITableViewDataSource-RACExtensions (0.1.6):
     - ReactiveCocoa (~> 2.3.1)
 
 DEPENDENCIES:
-  - UITableViewDataSource-RACExtensions (from `../..`)
+  - UITableViewDataSource-RACExtensions (from `../../UITableViewDataSource-RACExtensions.podspec`)
 
 EXTERNAL SOURCES:
   UITableViewDataSource-RACExtensions:
-    :path: ../..
+    :path: ../../UITableViewDataSource-RACExtensions.podspec
 
 SPEC CHECKSUMS:
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
-  UITableViewDataSource-RACExtensions: d18b753fd2e628a8b0df972bd3d03bc2d7db56da
+  UITableViewDataSource-RACExtensions: 19105251f8a9dc4741f7a394d97cde6b9c122364
 
 COCOAPODS: 0.33.1
